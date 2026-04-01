@@ -1,0 +1,240 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --dark-bg: #0F1D2B;
+    --medium-blue: #26425A;
+    --accent-pink: #C38EB4;
+    --light-pink: #E1CBD7;
+    --sky-blue: #86A8CF;
+    --white: #ffffff;
+}
+
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background-color: var(--light-pink);
+    color: var(--dark-bg);
+    line-height: 1.6;
+}
+
+.header {
+   background-color: var(--dark-bg); /* Темный синий из палитры */
+    padding: 15px 10%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    /* Добавляем нижнюю границу, чтобы отделить от темного блока hero */
+    border-bottom: 1px solid var(--medium-blue); 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.logo {
+    color: var(--light-pink);
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.nav-menu a {
+    color: var(--white);
+    text-decoration: none;
+    margin-left: 20px;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.nav-menu a:hover {
+    color: var(--sky-blue);
+}
+
+.hero {
+    background: linear-gradient(180deg, var(--dark-bg) 0%, var(--medium-blue) 100%);
+    padding: 80px 10%;
+    color: var(--white);
+    border-bottom-left-radius: 80px;
+    border-bottom-right-radius: 80px;
+}
+
+.hero-content {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+
+.hero-text { flex: 1; }
+
+.hero-text h1 {
+    font-size: 42px;
+    margin-bottom: 20px;
+    line-height: 1.2;
+}
+
+.hero-image { flex: 1; text-align: center; }
+
+.hero-image img {
+    width: 320px;
+    height: 320px;
+    border-radius: 50%;
+    border: 8px solid var(--accent-pink);
+    object-fit: cover;
+}
+
+.btn {
+    background-color: var(--accent-pink);
+    color: white;
+    padding: 15px 35px;
+    border-radius: 50px;
+    text-decoration: none;
+    display: inline-block;
+    font-weight: bold;
+    transition: 0.3s;
+    border: none;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.btn:hover {
+    background-color: var(--sky-blue);
+    transform: translateY(-3px);
+}
+
+.about {
+    padding: 80px 10%;
+    text-align: center;
+}
+
+.about h2 {
+    font-size: 32px;
+    margin-bottom: 30px;
+}
+
+.about-container {
+    max-width: 800px;
+    margin: 0 auto;
+    background: white;
+    padding: 40px;
+    border-radius: 30px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+}
+
+.services {
+    padding: 60px 10%;
+    background-color: #f9f0f5;
+}
+
+.services h2 {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.price-card {
+    background: var(--white);
+    padding: 30px;
+    border-radius: 25px;
+    text-align: center;
+    transition: 0.3s;
+}
+
+.price-card:hover {
+    transform: scale(1.05);
+}
+
+.price {
+    font-size: 28px;
+    font-weight: bold;
+    color: var(--accent-pink);
+    margin: 15px 0;
+}
+
+.footer {
+background-color: var(--dark-bg);
+    color: var(--white);
+    padding: 60px 10% 30px 10%;
+    text-align: center;
+    
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+    margin-top: 50px;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    margin: 30px auto;
+    gap: 15px;
+}
+
+.contact-form input {
+    padding: 15px;
+    border-radius: 15px;
+    border: none;
+    font-size: 16px;
+}
+
+.socials {
+    margin-top: 30px;
+}
+
+.socials a {
+color: var(--sky-blue);
+    margin: 0 15px;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.socials a:hover {
+  color: var(--accent-pink);
+}
+
+.credits {
+    margin-top: 30px;
+    font-size: 14px;
+    color: var(--light-blue);
+}
+/* Центрируем навигацию */
+.header {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr; /* Три колонки: лого, меню, кнопка */
+    align-items: center;
+}
+
+.nav-menu {
+    justify-self: center;
+}
+
+.auth-buttons {
+    justify-self: end;
+}
+
+/* Стиль кнопки регистрации в шапке */
+.btn-auth {
+    background: var(--accent-pink);
+    color: white;
+    padding: 8px 18px;
+    border-radius: 20px;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: bold;
+    transition: 0.3s;
+    border: 2px solid transparent;
+}
+
+.btn-auth:hover {
+    background: transparent;
+    border-color: var(--accent-pink);
+    color: var(--accent-pink);
+}
